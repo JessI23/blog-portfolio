@@ -1,0 +1,71 @@
+@font-face {
+	font-family: "my-font";
+	src: url("../fonts/calligraffitti/calligraffitti-regular.ttf");
+}
+
+* {
+	font-family: "my-font";
+}
+
+#site-intro h1 {
+	font-size: 50px;				/*specified since couldn't figure out how to override h1 in site title*/
+}
+
+#site-title h1 {
+	font-size: 140px;
+	-ms-transform: rotate(-10deg);
+	-moz-transform: rotate(-10deg);
+	-webkit-transform: rotate(-10deg);
+	transform: rotate(-10deg);
+	/*glow*/
+	-o-text-shadow: 0 0 30px #ff6699, 0 0 30px #ff6699, 0 0 30px #ff6699, 0 0 30px #ff6699;
+	-ms-text-shadow: 0 0 30px #ff6699, 0 0 30px #ff6699, 0 0 30px #ff6699, 0 0 30px #ff6699;
+	-moz-text-shadow: 0 0 30px #ff6699, 0 0 30px #ff6699, 0 0 30px #ff6699, 0 0 30px #ff6699;
+	-webkit-text-shadow: 0 0 30px #ff6699, 0 0 30px #ff6699, 0 0 30px #ff6699, 0 0 30px #ff6699;
+	text-shadow: 0 0 30px #ff6699, 0 0 30px #ff6699, 0 0 30px #ff6699, 0 0 30px #ff6699;
+}
+
+.ie #site-title {
+	width: 500px;
+	background-color: #f08bb9;
+	border: 2px solid #ff6699;
+	text-align: center;
+}
+
+h2 {
+	padding: 20px;
+	font-size: 35px;
+	text-align: center;
+	padding-top: 15px;
+	
+}
+
+h2::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: url("../images/sakura-logo-3.png") '';
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+.content-container p,
+.content-container a,
+textarea {
+	font-family: "arial";
+}
+
+.page-description {
+	padding-top: 10px;
+	font-size: 20px;
+}
+
+#address p {
+	color: #ffffff;
+}
+
+label {
+	font-size: 20px;
+}

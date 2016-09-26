@@ -1,0 +1,38 @@
+nav {
+	background-color: #2a2b2e;
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 999;
+}
+
+nav a {
+	float: left;
+	width: 25%;
+	height: 100%;
+	text-align: center;
+	padding-top:17px;		/* (nav=50px - fontsize(a)=16px) 34 / 2 */
+	-o-transition: background-color 0.5s ease;
+	-ms-transition: background-color 0.5s ease;
+	-moz-transition: background-color 0.5s ease;
+	-webkit-transition: background-color 0.5s ease;
+	transition: background-color 0.5s ease;
+	color: #ffffff;
+	position: relative;
+	z-index: -5;
+}
+
+nav a:hover {
+	background-color: #657381;
+	z-index: -5;
+}
+
+nav a#active::before  {
+	content: url("../images/sakura-logo-3.png") '';
+	position: absolute;
+	left: 20%;
+	top: 5px;
+	z-index: -10;
+	
+}

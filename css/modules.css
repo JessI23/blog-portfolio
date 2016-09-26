@@ -1,0 +1,205 @@
+* {
+	box-sizing: border-box;
+}
+
+#single-main::before {
+	content: url(../images/cherryblossomtree.png) '';
+}
+
+#single-main {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	height: 100%;
+	background-image: url("../images/bg4.jpg");
+	-o- background-size: cover;
+	-ms- background-size: cover;
+	-moz- background-size: cover;
+	-webkit- background-size: cover;
+	background-size: cover;
+	position: relative;
+	z-index: -999;
+	display: block;
+	overflow: hidden;
+}
+
+#site-intro {
+	width: 315px;
+	height: 150px;
+	position: absolute;
+	top: 50%;
+	margin-top: -75px;
+	right: 10%;
+	color: #2a2b2e;
+}
+
+#site-title {
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	transform: translatey(-50%);
+	/*color: #2a2b2e;*/
+}
+
+.content-container {
+	background-color: #ffffff;
+}
+
+.content-container.alt {
+	background-color: #bce7fd;
+}
+
+/*.content-container:not(.alt) .content::before {
+	content: '';
+	background-image: url("../images/blue-border.png");
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: 100% 100%;
+}*/
+
+.content {
+	width: 60%;
+	margin: auto;
+	padding: 20px;
+	overflow: auto;
+	position: relative;
+}
+
+#about-me p {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.section {
+	width: 100%;
+	padding: 15px;
+	text-align: center;
+}
+
+.section img {
+	width: 150px;
+	height: 150px;
+	margin: auto;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+}
+
+@media screen and (min-width: 850px) {
+	.contact-info-container {
+		width: 510px;
+	}
+	#number.contact-info {
+		float: left;
+	}
+	#email.contact-info {
+		float: right;
+	}
+	.section {
+		width: 50%;
+		float: left;
+	}
+}
+
+.contact-info {
+	text-align: center;
+	background-color: #ff6699; /*or #1b998b*/
+	overflow: auto;
+	margin: 10px auto 10px auto;
+	padding: 10px;
+	height: 200px;
+	width: 200px;
+	position: relative;
+}
+
+.contact-info::before {
+	content: url(../images/sakura-logo-2.png) '';
+	position: absolute;
+	top: 10px;
+	left: 0;
+	width: 200px;
+}
+
+#address.contact-info {
+	padding-top: 55px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+}
+
+#number.contact-info {
+	padding-top: 77px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	/*float: left;*/
+}
+
+#email.contact-info {
+	padding-top: 70px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	/*float: right;*/
+}
+
+textarea {
+	outline: none;
+	resize: none;
+	overflow: auto;
+	color: black;
+	font-size: 20px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#email-message {
+	width: 100%;
+}
+
+#email-name, 
+#email-address {
+	margin-top: 10px;
+	margin-bottom: 10px; 			/*would be SO much easier if i could make this equal 1% of width*/
+	width: 49.5%;
+	display: block;
+	padding: 5px;
+}
+
+#email-name {
+	float: left;
+}
+
+#email-address {
+	float: right;
+}
+
+#map.content {
+	width: 900px;
+	height: 450px;
+}
+
+@media screen and (max-width: 900px) {
+	#map.content {
+		width: 100%;
+	}
+}
+
+iframe {
+	width: 100%;
+	height: 100%;
+	margin: auto;
+}

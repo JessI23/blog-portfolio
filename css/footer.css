@@ -1,0 +1,35 @@
+footer {
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	background-color: #2a2b2e;
+}
+
+footer a {
+	float: right;
+	width: 100px;
+	height: 100%;
+	padding-top: 17px;			/* (footer=50px - fontsize(a)=16px) 34 / 2 */
+	text-align: center;
+	-o-transition: background-color 0.5s ease;
+	-ms-transition: background-color 0.5s ease;
+	-moz-transition: background-color 0.5s ease;
+	-webkit-transition: background-color 0.5s ease;
+	transition: background-color 0.5s ease;
+	color: #ffffff;
+}
+
+footer a:hover {
+	background-color: #657381;
+}
+
+/*footer::before {
+	content: url(../images/sakura.png) '';
+	padding: 25px;
+	position: absolute;
+	left: 100px;
+	top: -75px;
+	background: radial-gradient(#ffffa7, rgba(0,0,0,0));
+	border-radius: 100%;
+}*/
