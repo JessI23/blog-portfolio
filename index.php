@@ -7,11 +7,10 @@
 </head>
 <body>
 	<nav>
-		<a href="index.php" id="active">Home</a>
-		<a href="about.php">About Me</a>
-		<a href="portfolio.php">Portfolio</a>
-		<a href="blog.php">Blog</a>
-		<a href="contact.php">Contact Me</a>
+		<?php
+			$activePage = 'home';
+			require 'includes/nav.phtml';
+		?>
 	</nav>
 	<main id="single-main">
 		<div id="site-title">

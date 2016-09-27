@@ -7,11 +7,10 @@
 </head>
 <body>
 	<nav>
-		<a href="index.php">Home</a>
-		<a href="about.php">About Me</a>
-		<a href="portfolio.php" id="active">Portfolio</a>
-		<a href="blog.php">Blog</a>
-		<a href="contact.php">Contact Me</a>
+		<?php
+			$activePage = 'portfolio';
+			require 'includes/nav.phtml';
+		?>
 	</nav>
 	<div id="page-content">
 		<header>

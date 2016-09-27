@@ -12,11 +12,10 @@
 </head>
 <body id="contact-page">
 	<nav>
-		<a href="index.php">Home</a>
-		<a href="about.php">About Me</a>
-		<a href="portfolio.php">Portfolio</a>
-		<a href="blog.php">Blog</a>
-		<a href="contact.php" id="active">Contact Me</a>
+		<?php
+			$activePage = 'contact';
+			require 'includes/nav.phtml';
+		?>
 	</nav>
 	<div id="page-content">
 		<header>
