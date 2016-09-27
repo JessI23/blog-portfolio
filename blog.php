@@ -30,27 +30,27 @@
 					<h2>My Blogs</h2>
 					<div class="section">
 						<img src="images/pinkbg.jpg" alt="blog logo">
-						<h3>Blog 1</h3>
-						<p>posted: ...</p>
-						<p>blog: unavailable. this will contain a description of a blog that I will have written... <a href="#">read more...</a></p>
-					</div>
+                        <h3>Blog 1</h3>
+                        <p>posted: ...</p>
+						<p>blog: unavailable. this will contain a description of a blog that I will have written... <a href="blog_post.php">read more...</a></p>
+                    </div>
 					<div class="section">
 						<img src="images/bg4.jpg" alt="blog logo">
 						<h3>Blog 2</h3>
 						<p>posted: ...</p>
-						<p>blog: unavailable. this will contain a description of a blog that I will have written... <a href="#">read more...</a></p>
+						<p>blog: unavailable. this will contain a description of a blog that I will have written... <a href="blog_post.php">read more...</a></p>
 					</div>
 					<div class="section">
 						<img src="images/bg4.jpg" alt="blog logo">
 						<h3>Blog 3</h3>
 						<p>posted: ...</p>
-						<p>blog: unavailable. this will contain a description of a blog that I will have written... <a href="#">read more...</a></p>
+						<p>blog: unavailable. this will contain a description of a blog that I will have written... <a href="blog_post.php">read more...</a></p>
 					</div>
 					<div class="section">
 						<img src="images/pinkbg.jpg" alt="blog logo">
 						<h3>Blog 4</h3>
 						<p>posted: ...</p>
-						<p>blog: unavailable. this will contain a description of a blog that I will have written... <a href="#">read more...</a></p>
+						<p>blog: unavailable. this will contain a description of a blog that I will have written... <a href="blog_post.php">read more...</a></p>
 					</div>
 				</div>
 				<div class="content-container">

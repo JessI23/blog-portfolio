@@ -15,8 +15,8 @@
     <div id="page-content">
         <header>
             <div id="intro">
-                <h1>My Title</h1>
-                <p class="page-description">description?</p>
+                <h1>Blog Title</h1>
+                <p class="page-description">subtitle</p>
             </div>
         </header>
         <main>
