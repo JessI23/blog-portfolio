@@ -6,22 +6,17 @@
    <html>
 <!--<![endif]-->
 <head>
-	<link rel="stylesheet" type="text/css" href="css/header.css">
-	<link rel="stylesheet" type="text/css" href="css/navbar.css">
-	<link rel="stylesheet" type="text/css" href="css/typogrophy.css">
-	<link rel="stylesheet" type="text/css" href="css/global.css">
-	<link rel="stylesheet" type="text/css" href="css/modules.css">
-	<link rel="stylesheet" type="text/css" href="css/buttons.css">
-	<link rel="stylesheet" type="text/css" href="css/footer.css">
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
+	<?php
+		require 'head.phtml';
+	?>
 </head>
 <body id="contact-page">
 	<nav>
-		<a href="index.html">Home</a>
-		<a href="about.html">About Me</a>
-		<a href="portfolio.html">Portfolio</a>
-		<!-- <a href="blog.html">Blog</a> -->
-		<a href="contact.html" id="active">Contact Me</a>
+		<a href="index.php">Home</a>
+		<a href="about.php">About Me</a>
+		<a href="portfolio.php">Portfolio</a>
+		<a href="blog.php">Blog</a>
+		<a href="contact.php" id="active">Contact Me</a>
 	</nav>
 	<div id="page-content">
 		<header>
@@ -34,8 +29,8 @@
 			<div class="content-container">
 				<div class="content contact-info-container">
 					<div class="contact-info" id="address">
-						<h3>Address</h3>
-						<p>4 North cantril avenue<br>Liverpool<br>L12 6RD</p>
+						<h3>Location</h3>
+						<p>Liverpool</p>
 					</div>
 					<div class="contact-info" id="number">
 						<h3>Phone Number</h3>
@@ -64,9 +59,9 @@
 		</main>
 	</div>
 	<footer>
-		<a href="https://www.facebook.com/jessica.isaacs.794">facebook</a>
-		<a href="https://github.com/JessI23">gitHub</a>
-		<a href="https://uk.linkedin.com/in/jessica-isaacs-65294b102">linkdin</a>
+		<?php
+			require 'footer.phtml';
+		?>
 	</footer>
 </body>
 </html>
