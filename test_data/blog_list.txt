@@ -1,42 +1,47 @@
+images/pinkbg.jpg
+|
 My First Blog
-
+|
 Jess
-
+|
 1/1/2016
-
+|
 This is the description of my first blog.
-
+|
 my_first_blog
-
 *
+images/bg4.jpg
+|
 My Second Blog
-
+|
 Aimee & Jess
-
+|
 30/12/2014
-
+|
 This is a description of aimee and jess's blog.
-
+|
 my_second_blog
-
 *
+images/bg4.jpg
+|
 My Third Blog
-
+|
 Ali
-
+|
 -
-
+|
 Some kind of description of the third blog.
-
+|
 my_third_blog
-
 *
+images/pinkbg.jpg
+|
 The last blog
-
+|
 Everyone
-
+|
 1/1/?
-
+|
 idk some kind of description.
-
+|
 the_last_blog
