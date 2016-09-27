@@ -25,33 +25,34 @@
 					<p>I have written blog posts for...<br>...<br>...<br>...<br>... no idea</p>
 				</div>
 			</div>
+            <?php
+                //get blog list and descriptions
+                $blogListString = file_get_contents('test_data/blog_list.txt', 'r');
+                $blogListTemp = explode('*', $blogListString);
+
+                foreach($blogListTemp as $key => $element){
+                    $blogList[$key] = explode('|', $element);
+                }
+                $blogList = array_reverse($blogList); //makes it so that the latest one is first
+            ?>
 			<div class="content-container alt">
 				<div class="content">
 					<h2>My Blogs</h2>
-					<div class="section">
-						<img src="images/pinkbg.jpg" alt="blog logo">
-                        <h3>Blog 1</h3>
-                        <p>posted: ...</p>
-						<p>blog: unavailable. this will contain a description of a blog that I will have written... <a href="blog_post.php">read more...</a></p>
-                    </div>
-					<div class="section">
-						<img src="images/bg4.jpg" alt="blog logo">
-						<h3>Blog 2</h3>
-						<p>posted: ...</p>
-						<p>blog: unavailable. this will contain a description of a blog that I will have written... <a href="blog_post.php">read more...</a></p>
-					</div>
-					<div class="section">
-						<img src="images/bg4.jpg" alt="blog logo">
-						<h3>Blog 3</h3>
-						<p>posted: ...</p>
-						<p>blog: unavailable. this will contain a description of a blog that I will have written... <a href="blog_post.php">read more...</a></p>
-					</div>
-					<div class="section">
-						<img src="images/pinkbg.jpg" alt="blog logo">
-						<h3>Blog 4</h3>
-						<p>posted: ...</p>
-						<p>blog: unavailable. this will contain a description of a blog that I will have written... <a href="blog_post.php">read more...</a></p>
-					</div>
+                    <?php
+                        //print blog list on page
+                        //array2[blog][element] - element: [img, title, author, date, description, file]
+                        //for each blog:
+                        foreach ($blogList as $blog){
+
+                            $img = $blog[0];
+                            $title = $blog[1];
+                            $author = $blog[2];
+                            $date = $blog[3];
+                            $content = $blog[4];
+
+                            include 'includes/blog_description.phtml';
+                        }
+                    ?>
 				</div>
 				<div class="content-container">
 					<div class="content">
