@@ -7,7 +7,7 @@
 <!--<![endif]-->
 <head>
 	<?php
-		require 'head.phtml';
+		require 'includes/head.phtml';
 	?>
 </head>
 <body id="contact-page">
@@ -60,7 +60,7 @@
 	</div>
 	<footer>
 		<?php
-			require 'footer.phtml';
+			require 'includes/footer.phtml';
 		?>
 	</footer>
 </body>

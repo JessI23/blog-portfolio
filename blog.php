@@ -2,7 +2,7 @@
 <html>
 <head>
     <?php
-        require 'head.phtml';
+        require 'includes/head.phtml';
     ?>
 </head>
 <body>
@@ -64,7 +64,7 @@
 	</div>
 	<footer>
         <?php
-            require 'footer.phtml';
+            require 'includes/footer.phtml';
         ?>
 	</footer>
 </body>
