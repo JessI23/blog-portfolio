@@ -38,6 +38,8 @@
 
 #site-blog-container {
 	width: 40%;
+	height: 80%;
+	overflow: auto;
 	position: absolute;
 	top: 100px;
 	right: 10%;
