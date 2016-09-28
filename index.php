@@ -48,7 +48,7 @@
 					$title = $blogList[$i][1];
 					$author = $blogList[$i][2];
 					$date = $blogList[$i][3];
-					$content = $blogList[$i][4];
+					$description = $blogList[$i][4];
 
 					include 'includes/blog_description.phtml';
 				}

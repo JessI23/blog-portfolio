@@ -48,7 +48,7 @@
                             $title = $blog[1];
                             $author = $blog[2];
                             $date = $blog[3];
-                            $content = $blog[4];
+                            $description = $blog[4];
 
                             include 'includes/blog_description.phtml';
                         }
