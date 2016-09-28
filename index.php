@@ -32,22 +32,7 @@
 				//get blog list and descriptions
 				require 'includes/classes/blog_list.php';
 				$blog_list = new blogList('test_data/blog_list.txt');
-
-				$blog_list_recent = $blog_list->getRecent(4);
-
-				//print blog list on page
-				//array2[blog][element] - element: [img, title, author, date, description, file]
-				//for the latest 3 blogs:
-				foreach ($blog_list_recent as $blog){
-
-					$img = $blog[0];
-					$title = $blog[1];
-					$author = $blog[2];
-					$date = $blog[3];
-					$description = $blog[4];
-
-					include 'includes/blog_description.phtml';
-				}
+				$blog_list->printBlogs(4);
 			?>
 		</div>
 	</main>
