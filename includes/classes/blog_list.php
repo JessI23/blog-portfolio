@@ -26,12 +26,25 @@ class blogList {
         return $this->blog_list;
     }
 
+    //prints blog previews
+    public function printBlogs($number){
+        //print blog list on page
+        //structure: array[blog][element] - element: [img, title, author, date, description, file]
+        //for each blog:
+        for($i=0;$i<$number;$i++){
 
-    //return most recent
-    public function getRecent($number){
-        return array_slice($this->blog_list, 0, $number, true);
+            $img = $this->blog_list[$i][0];
+            $title = $this->blog_list[$i][1];
+            $author = $this->blog_list[$i][2];
+            $date = $this->blog_list[$i][3];
+            $description = $this->blog_list[$i][4];
+
+            echo    '<div class="section">' .
+                        '<img src="' . $img . '" alt="blog logo">' .
+                        '<h3>' . $title . '</h3>' .
+                        '<p>' . $author . ' ' . $date . '</p>' .
+                        '<p>' . $description . '<a href="blog_post.php">read more...</a></p>' .
+                    '</div>';
+        }
     }
-
-
-
 }
