@@ -27,13 +27,16 @@
 	color: #2a2b2e;
 }
 
-/*check translate stuff*/
 #site-title {
 	position: absolute;
 	top: 40%;
 	left: 10%;
 	transform: translatey(-60%);
 	/*color: #2a2b2e;*/
+}
+
+.ie #site-title {
+	top: 20%;
 }
 
 #site-blog-container {
