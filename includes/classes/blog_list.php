@@ -48,12 +48,13 @@ class blogList {
             $author = $this->blog_list[$i][2];
             $date = $this->blog_list[$i][3];
             $description = $this->blog_list[$i][4];
+            $file_name = $this->blog_list[$i][5];
 
             echo    '<div class="section">' .
                         '<img src="' . $img . '" alt="blog logo">' .
                         '<h3>' . $title . '</h3>' .
                         '<p>' . $author . ' ' . $date . '</p>' .
-                        '<p>' . $description . '<a href="blog_post.php">read more...</a></p>' .
+                        '<p>' . $description . '<a href="blog_post.php?blog=' . $file_name . '">read more...</a></p>' .
                     '</div>';
         }
     }
