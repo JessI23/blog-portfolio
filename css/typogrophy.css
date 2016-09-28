@@ -37,10 +37,17 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 }
 
+#site-blog-container p,
+#site-blog-container a,
 .content-container p,
 .content-container a,
 textarea {
 	font-family: "arial";
+}
+
+#site-blog-container p,
+#site-blog-container a {
+	font-size: 14px;
 }
 
 .page-description {
