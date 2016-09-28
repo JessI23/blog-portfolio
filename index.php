@@ -8,14 +8,14 @@
 <head>
 	<title>Jess's Site</title>
 	<?php
-		require_once 'includes/head.phtml';
+		require_once 'includes/templates/head.phtml';
 	?>
 </head>
 <body>
 	<nav>
 		<?php
 			$activePage = 'home';
-			require 'includes/nav.phtml';
+			require 'includes/templates/nav.phtml';
 		?>
 	</nav>
 	<main id="single-main">
@@ -30,25 +30,21 @@
 			<h2>Recent Blogs</h2>
 			<?php
 				//get blog list and descriptions
-				$blogListString = file_get_contents('test_data/blog_list.txt', 'r');
-				$blogListTemp = explode('*', $blogListString);
+				require 'includes/classes/blog_list.php';
+				$blog_list = new blogList('test_data/blog_list.txt');
 
-				foreach($blogListTemp as $key => $element){
-					$blogList[$key] = explode('|', $element);
-				}
-				$blogList = array_reverse($blogList); //makes it so that the latest one is first
-			?>
-			<?php
+				$blog_list_recent = $blog_list->getRecent(4);
+
 				//print blog list on page
 				//array2[blog][element] - element: [img, title, author, date, description, file]
 				//for the latest 3 blogs:
-				for($i=0; $i<4; $i++){
+				foreach ($blog_list_recent as $blog){
 
-					$img = $blogList[$i][0];
-					$title = $blogList[$i][1];
-					$author = $blogList[$i][2];
-					$date = $blogList[$i][3];
-					$description = $blogList[$i][4];
+					$img = $blog[0];
+					$title = $blog[1];
+					$author = $blog[2];
+					$date = $blog[3];
+					$description = $blog[4];
 
 					include 'includes/blog_description.phtml';
 				}
@@ -57,7 +53,7 @@
 	</main>
 	<footer>
 		<?php
-			require 'includes/footer.phtml';
+			require 'includes/templates/footer.phtml';
 		?>
 	</footer>
 </body>
