@@ -7,14 +7,14 @@
 <!--<![endif]-->
 <head>
 	<?php
-		require_once 'includes/head.phtml';
+		require_once 'includes/templates/head.phtml';
 	?>
 </head>
 <body id="contact-page">
 	<nav>
 		<?php
 			$activePage = 'contact';
-			require 'includes/nav.phtml';
+			require 'includes/templates/nav.phtml';
 		?>
 	</nav>
 	<div id="page-content">
@@ -59,7 +59,7 @@
 	</div>
 	<footer>
 		<?php
-			require 'includes/footer.phtml';
+			require 'includes/templates/footer.phtml';
 		?>
 	</footer>
 </body>
