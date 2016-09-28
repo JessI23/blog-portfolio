@@ -3,7 +3,7 @@
 <head>
 	<title>Jess's Site</title>
 	<?php
-		require 'includes/head.phtml';
+		require_once 'includes/head.phtml';
 	?>
 </head>
 <body>

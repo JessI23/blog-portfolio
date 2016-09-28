@@ -2,7 +2,7 @@
 <html>
 <head>
 	<?php
-		require 'includes/head.phtml';
+		require_once 'includes/head.phtml';
 	?>
 </head>
 <body>
