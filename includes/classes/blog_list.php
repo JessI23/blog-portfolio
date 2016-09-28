@@ -26,4 +26,12 @@ class blogList {
         return $this->blog_list;
     }
 
+
+    //return most recent
+    public function getRecent($number){
+        return array_slice($this->blog_list, 0, $number, true);
+    }
+
+
+
 }
