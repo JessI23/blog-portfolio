@@ -34,19 +34,7 @@
 				<div class="content">
 					<h2>My Blogs</h2>
                     <?php
-                        //print blog list on page
-                        //array2[blog][element] - element: [img, title, author, date, description, file]
-                        //for each blog:
-                        foreach ($blog_list->getList() as $blog){
-
-                            $img = $blog[0];
-                            $title = $blog[1];
-                            $author = $blog[2];
-                            $date = $blog[3];
-                            $description = $blog[4];
-
-                            include 'includes/blog_description.phtml';
-                        }
+                        $blog_list->printBlogs(count($blog_list->getList()));
                     ?>
 				</div>
 				<div class="content-container">
