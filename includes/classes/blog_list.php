@@ -2,14 +2,16 @@
 
 class blogList {
 
-    //array
     private $blog_list;
 
-
-    //pass in file (location in a string)
-    //get contents
-    //construct array
-    //set $blog_list = revers array (i.e.
+    /*
+     * takes a given file and puts the contents into an array
+     * reverses the order of the array to put the latest entry first
+     * structure: array[blog][element] - element: [img, title, author, date, description, file]
+     *
+     * @param (STRING) location of file with blog info
+     *
+     */
     public function __construct($file){
         $temp = file_get_contents($file , 'r');
         $temp = explode('*', $temp);
@@ -21,16 +23,24 @@ class blogList {
         $this->blog_list = array_reverse($this->blog_list);
     }
 
-    //return array
+    /*
+     * returns the $blog_list array
+     *
+     * @return (ARRAY) array of blog previews
+     *
+     */
     public function getList(){
         return $this->blog_list;
     }
 
-    //prints blog previews
+    /*
+     * displays the blog previews in the $blog_list array
+     *
+     * @param $number (INT) number of blog posts you want to display
+     *
+     */
     public function printBlogs($number){
-        //print blog list on page
-        //structure: array[blog][element] - element: [img, title, author, date, description, file]
-        //for each blog:
+
         for($i=0;$i<$number;$i++){
 
             $img = $this->blog_list[$i][0];
