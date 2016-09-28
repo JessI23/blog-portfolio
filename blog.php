@@ -2,14 +2,14 @@
 <html>
 <head>
     <?php
-        require_once 'includes/head.phtml';
+        require_once 'includes/templates/head.phtml';
     ?>
 </head>
 <body>
 	<nav>
         <?php
             $activePage = 'blog';
-            require 'includes/nav.phtml';
+            require 'includes/templates/nav.phtml';
         ?>
 	</nav>
 		<div id="page-content">
@@ -27,13 +27,8 @@
 			</div>
             <?php
                 //get blog list and descriptions
-                $blogListString = file_get_contents('test_data/blog_list.txt', 'r');
-                $blogListTemp = explode('*', $blogListString);
-
-                foreach($blogListTemp as $key => $element){
-                    $blogList[$key] = explode('|', $element);
-                }
-                $blogList = array_reverse($blogList); //makes it so that the latest one is first
+                require 'includes/classes/blog_list.php';
+                $blog_list = new blogList('test_data/blog_list.txt');
             ?>
 			<div class="content-container alt">
 				<div class="content">
@@ -42,7 +37,7 @@
                         //print blog list on page
                         //array2[blog][element] - element: [img, title, author, date, description, file]
                         //for each blog:
-                        foreach ($blogList as $blog){
+                        foreach ($blog_list->getList() as $blog){
 
                             $img = $blog[0];
                             $title = $blog[1];
@@ -64,7 +59,7 @@
 	</div>
 	<footer>
         <?php
-            require 'includes/footer.phtml';
+            require 'includes/templates/footer.phtml';
         ?>
 	</footer>
 </body>
