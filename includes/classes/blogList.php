@@ -2,7 +2,7 @@
 
 class blogList {
 
-    private $blog_list;
+    public $blog_list;
 
     /*
      * takes a given file and puts the contents into an array
@@ -13,14 +13,19 @@ class blogList {
      *
      */
     public function __construct($file){
-        $temp = file_get_contents($file , 'r');
-        $temp = explode('*', $temp);
 
-        foreach($temp as $key => $element){
-            $this->blog_list[$key] = explode('|', $element);
+        if(file_exists($file)) {
+            $temp = file_get_contents($file, 'r');
+            $temp = explode('*', $temp);
+
+            foreach ($temp as $key => $element) {
+                $this->blog_list[$key] = explode('|', $element);
+            }
+
+            $this->blog_list = array_reverse($this->blog_list);
+        } else {
+            $this->blog_list = [];
         }
-
-        $this->blog_list = array_reverse($this->blog_list);
     }
 
     /*
