@@ -2,7 +2,7 @@
 
 class blog {
 
-    private $blog;
+    public $blog;
     private $title;
     private $author;
     private $date;
@@ -17,18 +17,22 @@ class blog {
      *
      */
     public function __construct($file) {
-        $this->blog = file_get_contents($file , 'r');
-        $this->blog = explode("\n\n", $this->blog);
+        if(file_exists($file)) {
+            $this->blog = file_get_contents($file, 'r');
+            $this->blog = explode("\n\n", $this->blog);
 
-        $this->title = $this->blog[0];
-        $this->author = $this->blog[1];
-        $this->date = $this->blog[2];
-        $this->content = $this->blog[3];
+            $this->title = $this->blog[0];
+            $this->author = $this->blog[1];
+            $this->date = $this->blog[2];
+            $this->content = $this->blog[3];
 
-        if(count($this->blog) > 4){
-            for($i=4; $i<count($this->blog); $i++){
-                $this->content .= '<br><br>' . $this->blog[$i];
+            if (count($this->blog) > 4) {
+                for ($i = 4; $i < count($this->blog); $i++) {
+                    $this->content .= '<br><br>' . $this->blog[$i];
+                }
             }
+        } else {
+            $this->blog = [];
         }
     }
 
