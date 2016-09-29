@@ -17,9 +17,10 @@ class blog {
      *
      */
     public function __construct($file) {
+
         if(file_exists($file)) {
-            $this->blog = file_get_contents($file, 'r');
-            $this->blog = explode("\n\n", $this->blog);
+            $blogContents = $this->getBlogContents($file);
+            $this->blog = explode("\n\n", $blogContents);
 
             $this->title = $this->blog[0];
             $this->author = $this->blog[1];
