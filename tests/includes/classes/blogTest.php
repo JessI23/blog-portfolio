@@ -13,22 +13,12 @@ class blogTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * testing that when a string that isn't a file path is entered, it...
-     *
-     * @expectedException PHPUnit_Framework_Error
+     * testing that when a passed a string that isn't a file path is entered,
+     * it returns an empty array
      */
     public function testConstructBad(){
-        $blog = new blog('blog');
-
-    }
-
-    /*
-     * testing that when a file path isn't entered, it throws an error
-     */
-    public function testConstructMal(){
-        $array = [];
-        $blog = new blog($array);
-
+        $blogObject = new blog('blog');
+        $this->assertEmpty($blogObject->blog);
     }
 
 //    public function testGetTitleGood(){}
