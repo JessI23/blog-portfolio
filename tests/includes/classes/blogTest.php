@@ -3,14 +3,7 @@
 require ('../../../includes/classes/blog.php');
 
 class blogTest extends PHPUnit_Framework_TestCase {
-
-//    public function testThing() {
-//        $stub = $this->createMock(blog::class);
-//        $stub->method('getBlogContents')->willReturn('foo');
-//
-//        $this->assertEquals('foo', $stub->getBlogContents('fghj'));
-//    }
-
+    
     /*
      * testing that a new instance of the class is created
      */
@@ -44,12 +37,13 @@ class blogTest extends PHPUnit_Framework_TestCase {
 
         $return = $stub->getTitle();
         $this->assertEquals($return, 'title');
-
-
     }
 
 //    public function testGetTitleBad(){}
 
+    /*
+     * checks that function returns a string containing author and date of the object
+     */
     public function testGetSubtitleGood(){
 
         $stub = $this->getMockBuilder(blog::class)
@@ -68,6 +62,9 @@ class blogTest extends PHPUnit_Framework_TestCase {
 
 //    public function testGetSubtitleBad(){}
 
+    /*
+     * checks that function returns the contents of the object
+     */
     public function testGetContentGood(){
 
         $stub = $this->getMockBuilder(blog::class)
