@@ -41,7 +41,7 @@ class blogList {
      */
     public function printBlogs($number){
 
-        for($i=0;$i<$number;$i++){
+        for($i=0; $i<$number; $i++){
 
             $img = $this->blog_list[$i][0];
             $title = $this->blog_list[$i][1];
