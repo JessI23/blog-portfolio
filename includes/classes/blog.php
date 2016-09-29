@@ -37,12 +37,19 @@ class blog {
     }
 
     /*
+     * Cant unit test this due to I/O
+     */
+    public function getBlogContents($file) {
+        return file_get_contents($file, 'r');
+    }
+
+    /*
      * returns the blog title
      *
      * @return (STRING) blog title
      *
      */
-    public function getTitle(){
+    public function getTitle() {
         return $this->title;
     }
 
@@ -52,7 +59,7 @@ class blog {
      * @return (STRING) a string containing information about the author and post date
      *
      */
-    public function getSubtitle(){
+    public function getSubtitle() {
         return 'by ' . $this->author . '<br>posted on: ' . $this->date;
     }
 
@@ -62,7 +69,7 @@ class blog {
      * @return (STRING) a string containing all blog content
      *
      */
-    public function getContent(){
+    public function getContent() {
         return $this->content;
     }
 
