@@ -27,7 +27,7 @@
 			</div>
             <?php
                 //get blog list and descriptions
-                require 'includes/classes/blog_list.php';
+                require 'includes/classes/blogList.php';
                 $blog_list = new blogList('test_data/blog_list.txt');
             ?>
 			<div class="content-container alt">
