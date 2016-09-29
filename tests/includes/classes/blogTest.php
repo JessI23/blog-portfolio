@@ -2,7 +2,7 @@
 
 require ('../../../includes/classes/blog.php');
 
-class blog_test extends PHPUnit_Framework_TestCase {
+class blogTest extends PHPUnit_Framework_TestCase {
 
 //    public function testConstructGood(){}
 
