@@ -3,13 +3,13 @@
 require ('../../../includes/classes/blog.php');
 
 class blogTest extends PHPUnit_Framework_TestCase {
-    
+
     /*
      * testing that a new instance of the class is created
      */
     public function testConstructGood(){
-        $blog = new blog('blogListTest.php');
-        $this->assertInstanceOf(blog::class, $blog);
+        $blogObject = new blog('blogListTest.php');
+        $this->assertInstanceOf(blog::class, $blogObject);
     }
 
     /*
@@ -17,7 +17,7 @@ class blogTest extends PHPUnit_Framework_TestCase {
      * it returns an empty array
      */
     public function testConstructBad(){
-        $blogObject = new blog('blog');
+        $blogObject = new blog('not blog');
         $this->assertEmpty($blogObject->blog);
     }
 
