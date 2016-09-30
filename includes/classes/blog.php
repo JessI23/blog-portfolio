@@ -8,12 +8,12 @@ class blog {
     private $date;
     private $content;
 
-    /*
+    /**
      * takes a given file and puts the contents into an array
      * structure: array[blog] - blog: [title, name, date, content(, content...)]
      * if there is more than 1 section of content it concatenates them with two line breaks
      *
-     * @param (STRING) location of file with blog in it
+     * @param STRING location of file with blog in it
      *
      */
     public function __construct($file) {
@@ -44,30 +44,30 @@ class blog {
         return file_get_contents($file, 'r');
     }
 
-    /*
+    /**
      * returns the blog title
      *
-     * @return (STRING) blog title
+     * @return STRING blog title
      *
      */
     public function getTitle() {
         return $this->title;
     }
 
-    /*
+    /**
      * returns the blog subtitle
      *
-     * @return (STRING) a string containing information about the author and post date
+     * @return STRING a string containing information about the author and post date
      *
      */
     public function getSubtitle() {
         return 'by ' . $this->author . '<br>posted on: ' . $this->date;
     }
 
-    /*
+    /**
      * returns the blog content
      *
-     * @return (STRING) a string containing all blog content
+     * @return STRING a string containing all blog content
      *
      */
     public function getContent() {
