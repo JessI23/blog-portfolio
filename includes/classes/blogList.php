@@ -9,7 +9,7 @@ class blogList {
      * reverses the order of the array to put the latest entry first
      * structure: array[blog][element] - element: [img, title, author, date, description, file]
      *
-     * @param STRING location of file with blog info
+     * @param STRING $file location of file with blog info
      *
      */
     public function __construct($file){
