@@ -1,6 +1,6 @@
 <?php
 
-require ('../../../includes/classes/blogList.php');
+require '../../../includes/classes/blogList.php';
 
 class blogListTest extends PHPUnit_Framework_TestCase {
 
@@ -13,7 +13,7 @@ class blogListTest extends PHPUnit_Framework_TestCase {
     }
 
     /*
-     * testing that when a passed a string that isn't a file path is entered,
+     * testing that when passed a string that isn't a file path is entered,
      * it returns an empty array
      */
     public function testConstructBad(){

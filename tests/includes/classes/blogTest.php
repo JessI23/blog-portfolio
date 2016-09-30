@@ -1,6 +1,6 @@
 <?php
 
-require ('../../../includes/classes/blog.php');
+require '../../../includes/classes/blog.php';
 
 class blogTest extends PHPUnit_Framework_TestCase {
 
