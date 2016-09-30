@@ -9,7 +9,7 @@ class blogList {
      * reverses the order of the array to put the latest entry first
      * structure: array[blog][element] - element: [img, title, author, date, description, file]
      *
-     * @param (STRING) location of file with blog info
+     * @param STRING location of file with blog info
      *
      */
     public function __construct($file){
@@ -46,12 +46,16 @@ class blogList {
     }
 
     /**
-     * displays the blog previews in the $blog_list array
+     * returns an array of the blog previews to be displayed
      *
-     * @param $number (INT) number of blog posts you want to display
+     * @param $number INT number of blog posts you want to display
+     *
+     * @return STRING string of blog previews
      *
      */
     public function printBlogs($number){
+
+        $return = [];
 
         for($i=0; $i<$number; $i++){
 
@@ -62,12 +66,14 @@ class blogList {
             $description = $this->blog_list[$i][4];
             $file_name = $this->blog_list[$i][5];
 
-            echo    '<div class="section">' .
-                        '<img src="' . $img . '" alt="blog logo">' .
-                        '<h3>' . $title . '</h3>' .
-                        '<p>' . $author . ' ' . $date . '</p>' .
-                        '<p>' . $description . '<a href="blog_post.php?blog=' . $file_name . '">read more...</a></p>' .
-                    '</div>';
+            $return[$i] =   '<div class="section">' .
+                                '<img src="' . $img . '" alt="blog logo">' .
+                                '<h3>' . $title . '</h3>' .
+                                '<p>' . $author . ' ' . $date . '</p>' .
+                                '<p>' . $description . '<a href="blog_post.php?blog=' . $file_name . '">read more...</a></p>' .
+                            '</div>';
         }
+
+        return $return;
     }
 }
