@@ -21,12 +21,22 @@ class blogListTest extends PHPUnit_Framework_TestCase {
         $this->assertEmpty($blogObject->blog_list);
     }
 
-//    public function testGetListGood(){}
+    /*
+     * checks that function returns list array of blogs
+     */
+    public function testGetListGood(){
 
-//    public function testGetListBad(){}
+        $stub = $this->getMockBuilder(blogList::class)
+            ->setMethods(array('getBlogContents'))
+            ->disableOriginalConstructor()
+            ->getMock();
 
-//    public function testPrintBlogsGood(){}
+        $stub->expects($this->any())
+            ->method('getBlogContents')->will($this->returnValue("title|author|date|description"));
+        $stub->__construct('blogTest.php');
 
-//    public function testPrintBlogsBad(){}
-
+        $val = [['title', 'author', 'date', 'description']];
+        $return = $stub->getList();
+        $this->assertEquals($return, $val);
+    }
 }
