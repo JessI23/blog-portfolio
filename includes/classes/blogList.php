@@ -4,7 +4,7 @@ class blogList {
 
     public $blog_list;
 
-    /*
+    /**
      * takes a given file and puts the contents into an array
      * reverses the order of the array to put the latest entry first
      * structure: array[blog][element] - element: [img, title, author, date, description, file]
@@ -15,7 +15,7 @@ class blogList {
     public function __construct($file){
 
         if(file_exists($file)) {
-            $temp = file_get_contents($file, 'r');
+            $temp = $this->getBlogContents($file);
             $temp = explode('*', $temp);
 
             foreach ($temp as $key => $element) {
@@ -29,16 +29,23 @@ class blogList {
     }
 
     /*
+     * Cant unit test this due to I/O
+     */
+    public function getBlogContents($file) {
+        return file_get_contents($file, 'r');
+    }
+
+    /**
      * returns the $blog_list array
      *
-     * @return (ARRAY) array of blog previews
+     * @return ARRAY array of blog previews
      *
      */
     public function getList(){
         return $this->blog_list;
     }
 
-    /*
+    /**
      * displays the blog previews in the $blog_list array
      *
      * @param $number (INT) number of blog posts you want to display
