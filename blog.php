@@ -34,7 +34,11 @@
 				<div class="content">
 					<h2>My Blogs</h2>
                     <?php
-                        $blog_list->printBlogs(count($blog_list->getList()));
+                        $blog_previews = $blog_list->printBlogs(count($blog_list->getList()));
+
+                        for($i=0;$i<count($blog_previews);$i++){
+                            echo $blog_previews[$i];
+                        }
                     ?>
 				</div>
 				<div class="content-container">

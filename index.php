@@ -32,7 +32,11 @@
 				//get blog list and descriptions
 				require 'includes/classes/blogList.php';
 				$blog_list = new blogList('test_data/blog_list.txt');
-				$blog_list->printBlogs(4);
+				$blog_display = $blog_list->printBlogs(4);
+
+				for($i=0;$i<count($blog_display);$i++){
+					echo $blog_display[$i];
+				}
 			?>
 		</div>
 	</main>
