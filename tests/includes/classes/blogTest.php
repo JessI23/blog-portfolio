@@ -39,8 +39,6 @@ class blogTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals($return, 'title');
     }
 
-//    public function testGetTitleBad(){}
-
     /*
      * checks that function returns a string containing author and date of the object
      */
@@ -60,8 +58,6 @@ class blogTest extends PHPUnit_Framework_TestCase {
 
     }
 
-//    public function testGetSubtitleBad(){}
-
     /*
      * checks that function returns the contents of the object
      */
@@ -80,7 +76,5 @@ class blogTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals($return, 'contents');
 
     }
-
-//    public function testGetContentBad(){}
 
 }
