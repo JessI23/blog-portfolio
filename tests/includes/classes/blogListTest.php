@@ -39,4 +39,29 @@ class blogListTest extends PHPUnit_Framework_TestCase {
         $return = $stub->getList();
         $this->assertEquals($return, $val);
     }
+
+    /*
+     * checks that the function returns the correct html array for displaying blog previews
+     */
+    public function testPrintBlogs(){
+
+        $stub = $this->getMockBuilder(blogList::class)
+            ->setMethods(array('getBlogContents'))
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $stub->expects($this->any())
+            ->method('getBlogContents')->will($this->returnValue("img|title|author|date|description|filename"));
+        $stub->__construct('blogTest.php');
+
+        $val =  ['<div class="section">' .
+                    '<img src="img" alt="blog logo">' .
+                    '<h3>title</h3>' .
+                    '<p>author date</p>' .
+                    '<p>description<a href="blog_post.php?blog=filename">read more...</a></p>' .
+                '</div>'];
+        $return = $stub->printBlogs(1);
+        $this->assertEquals($return, $val);
+    }
+
 }
