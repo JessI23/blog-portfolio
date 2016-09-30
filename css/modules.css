@@ -2,22 +2,17 @@
 	box-sizing: border-box;
 }
 
-#single-main::before {
-	content: url(../images/cherryblossomtree.png) '';
-}
-
 #single-main {
 	padding-top: 50px;
 	padding-bottom: 50px;
 	height: 100%;
 	background-image: url("../images/bg4.jpg");
-	-o- background-size: cover;
-	-ms- background-size: cover;
-	-moz- background-size: cover;
-	-webkit- background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
 	background-size: cover;
 	position: relative;
-	z-index: -999;
 	display: block;
 	overflow: hidden;
 }
@@ -26,18 +21,30 @@
 	width: 315px;
 	height: 150px;
 	position: absolute;
-	top: 50%;
+	top: 70%;
 	margin-top: -75px;
-	right: 10%;
+	left: 5%;
 	color: #2a2b2e;
 }
 
 #site-title {
 	position: absolute;
-	top: 50%;
+	top: 40%;
 	left: 10%;
-	transform: translatey(-50%);
-	/*color: #2a2b2e;*/
+	transform: translatey(-60%);
+}
+
+.ie #site-title {
+	top: 20%;
+}
+
+#site-blog-container {
+	width: 40%;
+	height: 80%;
+	overflow: auto;
+	position: absolute;
+	top: 150px;
+	right: 10%;
 }
 
 .content-container {
@@ -47,17 +54,6 @@
 .content-container.alt {
 	background-color: #bce7fd;
 }
-
-/*.content-container:not(.alt) .content::before {
-	content: '';
-	background-image: url("../images/blue-border.png");
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-size: 100% 100%;
-}*/
 
 .content {
 	width: 60%;
@@ -125,7 +121,7 @@
 }
 
 #address.contact-info {
-	padding-top: 55px;
+	padding-top: 70px;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	-ms-border-radius: 50%;
@@ -140,7 +136,6 @@
 	-ms-border-radius: 50%;
 	-o-border-radius: 50%;
 	border-radius: 50%;
-	/*float: left;*/
 }
 
 #email.contact-info {
@@ -150,14 +145,13 @@
 	-ms-border-radius: 50%;
 	-o-border-radius: 50%;
 	border-radius: 50%;
-	/*float: right;*/
 }
 
 textarea {
 	outline: none;
 	resize: none;
 	overflow: auto;
-	color: black;
+	color: #000000;
 	font-size: 20px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -173,7 +167,7 @@ textarea {
 #email-name, 
 #email-address {
 	margin-top: 10px;
-	margin-bottom: 10px; 			/*would be SO much easier if i could make this equal 1% of width*/
+	margin-bottom: 10px;
 	width: 49.5%;
 	display: block;
 	padding: 5px;

@@ -1,21 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="css/header.css">
-	<link rel="stylesheet" type="text/css" href="css/navbar.css">
-	<link rel="stylesheet" type="text/css" href="css/typogrophy.css">
-	<link rel="stylesheet" type="text/css" href="css/global.css">
-	<link rel="stylesheet" type="text/css" href="css/modules.css">
-	<link rel="stylesheet" type="text/css" href="css/buttons.css">
-	<link rel="stylesheet" type="text/css" href="css/footer.css">
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
+	<?php
+		require_once 'includes/templates/head.phtml';
+	?>
 <body>
 	<nav>
-		<a href="index.html">Home</a>
-		<a href="about.html" id="active">About Me</a>
-		<a href="portfolio.html">Portfolio</a>
-		<!-- <a href="blog.html">Blog</a> -->
-		<a href="contact.html">Contact Me</a>
+		<?php
+			$activePage = 'about';
+			require 'includes/templates/nav.phtml';
+		?>
 	</nav>
 	<div id="page-content">
 		<header>
@@ -27,7 +21,7 @@
 		<main>	
 			<div class="content-container">
 				<div class="content" id="about-me">
-					<p>My name is Jessica (though people usually call me 'jess'). I graduated from Liverpool John Moores University with a BSc (hons) in Mathematics in 2015. I was first introduced to computer programming at uni, and fell in love with the logic and magic that is creating things using code, gaining a great enthusiasm and pashion for it. I am currently training in both front and back end development at <a href="http://www.maydenacademy.co.uk/">Mayden Acadamy</a>, and aim to become a Zend qualified engineer at the start of 2017. You can find examples of my work on my <a href="portfolio.html">portfolio</a> page, or if you want to get in touch you can visit the <a href="contact.html">contact</a> page or any of the social links below.</p>
+					<p>My name is Jessica (though people usually call me 'jess'). I graduated from Liverpool John Moores University with a BSc (hons) in Mathematics in 2015. I was first introduced to computer programming at uni, and fell in love with the logic and magic that is creating things using code, gaining a great enthusiasm and pashion for it. I am currently training in both front and back end development at <a href="http://www.maydenacademy.co.uk/">Mayden Acadamy</a>, and aim to become a Zend qualified engineer at the start of 2017. You can find examples of my work on my <a href="portfolio.php">portfolio</a> page, or if you want to get in touch you can visit the <a href="contact.php">contact</a> page or any of the social links below.</p>
 				</div>
 			</div>
 			<div class="content-container alt">
@@ -67,9 +61,9 @@
 		</main>
 	</div>
 	<footer>
-		<a href="https://www.facebook.com/jessica.isaacs.794">facebook</a>
-		<a href="https://github.com/JessI23">gitHub</a>
-		<a href="https://uk.linkedin.com/in/jessica-isaacs-65294b102">linkdin</a>
+		<?php
+			require 'includes/templates/footer.phtml';
+		?>
 	</footer>
 </body>
 </html>

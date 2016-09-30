@@ -12,7 +12,7 @@
 }
 
 #site-title h1 {
-	font-size: 140px;
+	font-size: 100px;
 	-ms-transform: rotate(-10deg);
 	-moz-transform: rotate(-10deg);
 	-webkit-transform: rotate(-10deg);
@@ -25,13 +25,6 @@
 	text-shadow: 0 0 30px #ff6699, 0 0 30px #ff6699, 0 0 30px #ff6699, 0 0 30px #ff6699;
 }
 
-.ie #site-title {
-	width: 500px;
-	background-color: #f08bb9;
-	border: 2px solid #ff6699;
-	text-align: center;
-}
-
 h2 {
 	padding: 20px;
 	font-size: 35px;
@@ -40,21 +33,21 @@ h2 {
 	
 }
 
-h2::before {
-	position: absolute;
-	top: 0;
-	left: 0;
-	content: url("../images/sakura-logo-3.png") '';
-}
-
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 }
 
+#site-blog-container p,
+#site-blog-container a,
 .content-container p,
 .content-container a,
 textarea {
 	font-family: "arial";
+}
+
+#site-blog-container p,
+#site-blog-container a {
+	font-size: 14px;
 }
 
 .page-description {
