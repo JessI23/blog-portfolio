@@ -32,9 +32,12 @@
 						//get data from database
 						$conn = new PDO("mysql:host=192.168.20.56;dbname=site_blog", "root", "");
 						$blog_list = getBlogs($conn);
-						var_dump($blog_list);
-						//print each blog description in database
 
+						//print each blog description
+						$blog_prev = printList($blog_list);
+						foreach($blog_prev as $blog){
+							echo $blog;
+						}
                     ?>
 				</div>
 				<div class="content-container">
@@ -58,5 +61,16 @@
 		$sql = "SELECT `id`, `title`, `author`, `date_created`, `desc`, `slug` FROM `articles`;";
 		$query=$conn->query($sql);
 		return $query->fetchAll(PDO::FETCH_ASSOC);
+	}
+
+	function printList($blog_list){
+		foreach($blog_list as $key => $val){
+			$print[$key] = 	'<div class="section">' .
+								'<h3>' . $val["title"] . '</h3>' .
+								'<p>' . $val["author"] . ' ' . $val["date_created"] . '</p>' .
+								'<p>' . $val["desc"] . '<a href="' . $val["slug"] . '">read more...</a></p>' .
+							'</div>';
+		}
+		return $print;
 	}
 ?>
