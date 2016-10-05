@@ -25,20 +25,12 @@
 					<p>I have written blog posts for...<br>...<br>...<br>...<br>... no idea</p>
 				</div>
 			</div>
-            <?php
-                //get blog list and descriptions
-                require 'includes/classes/blogList.php';
-                $blog_list = new blogList('test_data/blog_list.txt');
-            ?>
 			<div class="content-container alt">
 				<div class="content">
 					<h2>My Blogs</h2>
                     <?php
-                        $blog_previews = $blog_list->printBlogs(count($blog_list->getList()));
-
-                        for($i=0;$i<count($blog_previews);$i++){
-                            echo $blog_previews[$i];
-                        }
+						//get data from database
+						//print each blog description in database
                     ?>
 				</div>
 				<div class="content-container">

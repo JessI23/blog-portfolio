@@ -13,16 +13,10 @@
         ?>
     </nav>
     <div id="page-content">
-        <?php
-            require_once 'includes/classes/blog.php';
-            $file_path = 'test_data/' . $_GET['blog'] . '.txt';
-            $blog = new blog($file_path);
-        ?>
         <header>
             <div id="intro">
                 <?php
-                    echo '<h1>' . $blog->getTitle() . '</h1>';
-                    echo '<p class="page-description">' . $blog->getSubtitle() . '</p>'
+                    //print blog title and subtitle
                 ?>
             </div>
         </header>
@@ -30,7 +24,7 @@
             <div class="content-container">
                 <div class="content">
                     <?php
-                        echo '<p>' . $blog->getContent() . '</p>';
+                        //print blog content
                     ?>
                 </div>
             </div>
