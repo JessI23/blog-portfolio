@@ -31,6 +31,7 @@
                     <?php
 						//get data from database
 						//print each blog description in database
+						$conn = new PDO("mysql:host=192.168.20.56;dbname=site_blog", "root", "");
                     ?>
 				</div>
 				<div class="content-container">
