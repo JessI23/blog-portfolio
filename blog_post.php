@@ -16,7 +16,10 @@
         <header>
             <div id="intro">
                 <?php
+                    require_once 'includes/functions/database_functions.php';
                     //print blog title and subtitle
+                    $conn = new PDO("mysql:host=192.168.20.56;dbname=site_blog", "root", "");
+                    $blog = getBlog($conn, $_GET['blog']);
                 ?>
             </div>
         </header>
