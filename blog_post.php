@@ -20,6 +20,10 @@
                     //print blog title and subtitle
                     $conn = new PDO("mysql:host=192.168.20.56;dbname=site_blog", "root", "");
                     $blog = getBlog($conn, $_GET['blog']);
+
+                    echo '<h1>' . $blog['title'] . '</h1>';
+                    echo '<p class="page-description">written by:' . $blog['author'] . '<br>on ' . $blog['date_created'] . '</p>'
+
                 ?>
             </div>
         </header>
@@ -28,6 +32,7 @@
                 <div class="content">
                     <?php
                         //print blog content
+                        echo '<p>' . $blog['body'] . '</p>';
                     ?>
                 </div>
             </div>
