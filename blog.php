@@ -29,6 +29,7 @@
 				<div class="content">
 					<h2>My Blogs</h2>
                     <?php
+						require_once 'includes/functions/database_functions.php';
 						//get data from database
 						$conn = new PDO("mysql:host=192.168.20.56;dbname=site_blog", "root", "");
 						$blog_list = getBlogs($conn);
@@ -56,22 +57,3 @@
 </body>
 </html>
 
-<?php
-	function getBlogs($conn){
-		$sql = "SELECT `id`, `img`, `title`, `author`, `date_created`, `desc`, `slug` FROM `articles`;";
-		$query=$conn->query($sql);
-		return $query->fetchAll(PDO::FETCH_ASSOC);
-	}
-
-	function printList($blog_list){
-		foreach($blog_list as $key => $val){
-			$print[$key] = 	'<div class="section">' .
-								'<img src="' . $val['img'] . '" alt="blog logo">' .
-								'<h3>' . $val["title"] . '</h3>' .
-								'<p>' . $val["author"] . ' ' . $val["date_created"] . '</p>' .
-								'<p>' . $val["desc"] . '<a href="' . $val["slug"] . '">read more...</a></p>' .
-							'</div>';
-		}
-		return $print;
-	}
-?>
