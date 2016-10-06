@@ -19,8 +19,11 @@ function printList($blog_list){
 }
 
 function getBlog($conn, $slug){
-    $sql = "SELECT `title`, `author`, `date_created`, `body` FROM `articles` WHERE `slug` = '" . $slug . "';";
-    $query=$conn->query($sql);
+    $sql = "SELECT `articles`.`title`, `articles`.`author`, `articles`.`date_created`, `blog_content`.`body`
+              FROM `articles` 
+              LEFT JOIN `blog_content` ON `articles`.`body_id` = `blog_content`.`id` 
+              WHERE `slug` = '" . $slug . "';";
+    $query = $conn->query($sql);
     return $query->fetchAll(PDO::FETCH_ASSOC)[0];
 }
 
